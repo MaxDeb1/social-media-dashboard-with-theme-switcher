@@ -1,6 +1,6 @@
 {
-  "homepage": "https://maxdeb1.github.io/social-media-dashboard-with-theme-switcher",
   "name": "social-media-dashboard-with-theme-switcher-master-react",
+  "homepage": "https://maxdeb1.github.io/social-media-dashboard-with-theme-switcher",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,10 +14,11 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
