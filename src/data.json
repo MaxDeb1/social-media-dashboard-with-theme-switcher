@@ -1,0 +1,86 @@
+{
+    "socialMedias": [
+      {
+        "name": "facebook",
+        "image": "./images/icon-facebook.svg",
+        "username": "@nathanf",
+        "number": "1987",
+        "fans": "followers",
+        "statistics": "12"
+      },
+      {
+        "name": "twitter",
+        "image": "./images/icon-twitter.svg",
+        "username": "@nathanf",
+        "number": "1044",
+        "fans": "followers",
+        "statistics": "99"
+      },
+      {
+        "name": "instagram",
+        "image": "./images/icon-instagram.svg",
+        "username": "@realnathanf",
+        "number": "11K",
+        "fans": "followers",
+        "statistics": "1099"
+      },
+      {
+        "name": "youtube",
+        "image": "./images/icon-youtube.svg",
+        "username": "Nathan F.",
+        "number": "8239",
+        "fans": "subscribers",
+        "statistics": "-144"
+      }
+    ],
+    "overviews": [
+      {
+        "metric": "Page Views",
+        "image": "./images/icon-facebook.svg",
+        "engagement": "87",
+        "rate": "3"
+      },
+      {
+        "metric": "Likes",
+        "image": "./images/icon-facebook.svg",
+        "engagement": "52",
+        "rate": "-2"
+      },
+      {
+        "metric": "Likes",
+        "image": "./images/icon-instagram.svg",
+        "engagement": "5462",
+        "rate": "2257"
+      },
+      {
+        "metric": "Profil Views",
+        "image": "./images/icon-instagram.svg",
+        "engagement": "52K",
+        "rate": "1375"
+      },
+      {
+        "metric": "Retweets",
+        "image": "./images/icon-twitter.svg",
+        "engagement": "117",
+        "rate": "303"
+      },
+      {
+        "metric": "Likes",
+        "image": "./images/icon-twitter.svg",
+        "engagement": "507",
+        "rate": "553"
+      },
+      {
+        "metric": "Likes",
+        "image": "./images/icon-youtube.svg",
+        "engagement": "107",
+        "rate": "-19"
+      },
+      {
+        "metric": "Total Views",
+        "image": "./images/icon-youtube.svg",
+        "engagement": "1407",
+        "rate": "-12"
+      }
+    ]
+  }

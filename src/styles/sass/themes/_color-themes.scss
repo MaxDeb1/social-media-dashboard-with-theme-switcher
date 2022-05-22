@@ -1,0 +1,96 @@
+//shortcuts
+$toggle: 'toggle';
+$background: 'background';
+$bg-pattern: 'bg-pattern';
+$card-bg: 'card-bg';
+$text: 'text';
+$text-secondary: 'text-secondary';
+$mode: 'mode';
+$hover: 'hover';
+
+//themes
+$themes: (
+  default: (
+    toggle: hsl(230, 22%, 74%),
+    background: hsl(0, 0%, 100%),
+    bg-pattern: hsl(225, 100%, 98%),
+    card-bg: hsl(227, 47%, 96%),
+    text: hsl(228, 12%, 44%),
+    text-secondary: hsl(230, 17%, 14%),
+    mode: hsl(228, 12%, 44%),
+    hover: hsl(232, 33%, 91%)
+  ),
+  dark: (
+    toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)),
+    background: hsl(230, 17%, 14%),
+    bg-pattern: hsl(232, 19%, 15%),
+    card-bg: hsl(228, 28%, 20%),
+    text: hsl(228, 34%, 66%),
+    text-secondary: hsl(0, 0%, 100%),
+    mode: hsl(227, 47%, 96%),
+    hover: hsl(228, 28%, 30%)
+  ),
+);
+
+@mixin themed() {
+    @each $theme, $map in $themes {
+        :global(.theme--#{$theme}) & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+            $value: map-get(map-get($themes, $theme), "#{$key}");
+            $theme-map: map-merge(
+            $theme-map,
+            (
+                $key: $value,
+            )
+            ) !global;
+        }
+        @content;
+        $theme-map: null !global;
+        }
+    }
+}
+
+@mixin gthemed() {
+    @each $theme, $map in $themes {
+        .theme--#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+            $value: map-get(map-get($themes, $theme), "#{$key}");
+            $theme-map: map-merge(
+            $theme-map,
+            (
+                $key: $value,
+            )
+            ) !global;
+        }
+        @content;
+        $theme-map: null !global;
+        }
+    }
+}
+
+@function t($key: "base0") {
+    @return map-get($theme-map, $key);
+}
+
+/*
+How to call the theming function and mixin from within our stylesheets :
+
+.badge {
+  font-weight: normal;
+  margin-right: 3px;
+  font-size: $font-size--tags;
+  padding: 4px 10px;
+  text-transform: lowercase;
+
+  @include themed() {
+    background: t($card-bg);
+    color: t($text);
+    border: 1px solid t($border);
+  }
+}
+
+Each time you want to use a theme, call the themed mixin with @include themed() and inside it use the t() function around your key
+These are what we passing into @t like color: t($text); but we could also do color: t('text');
+*/

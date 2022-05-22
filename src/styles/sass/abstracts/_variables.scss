@@ -1,0 +1,20 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+// Font Variable
+$inter: 'Inter', sans-serif;
+
+///Colors
+$limegreen: hsl(163, 72%, 41%);
+$red: hsl(356, 69%, 56%);
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+
+/// Responsive Font-Size
+html {
+  --res: calc(0.01 * 10vmin);
+}
+//How to use it : font-size: calc(64 * vart(--res));

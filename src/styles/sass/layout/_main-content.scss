@@ -1,0 +1,26 @@
+.dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 255px);
+    grid-gap: 1.5rem;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    .dashboard {
+        row-gap: 1.5rem;
+    }
+
+    .dashboard,
+    .overview {
+        justify-content: center;
+    }
+}

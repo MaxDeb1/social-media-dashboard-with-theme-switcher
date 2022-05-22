@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.base{
+  width: 100vw;
+  min-height: 100vh;
+  font-family: $inter;
+  font-weight: 600;
+  padding: 34px 11.46%;
+
+  @include themed() {
+    background: linear-gradient(to bottom, t($bg-pattern) 25%, t($background) 0%) ;
+  }
+}
+
+input {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0.2rem;
+
+  @include themed() {
+    color: t($text-secondary);
+  }
+}
+
+h2 {
+  margin: 51px 0 25px;
+  font-size: 1.5rem;
+
+  @include themed() {
+      color: t($text);
+  }
+}
+
+.header {
+  .mode {
+    @include themed() {
+        color: t($mode);
+    }
+  }
+}
+
+.followers {
+  @include themed() {
+      color: t($text);
+    }
+}
+
+
+@media (max-width: 900px) {
+  h2 {
+    margin: 40px 0 30px;
+  }
+
+  .header {
+    .title {
+      border-bottom: 2px solid;
+      padding-bottom: 1.5rem;
+
+      @include themed() {
+          border-color: t($card-bg);
+        }
+    }
+
+    .theme-selection {
+      justify-content: space-between;
+      margin-left: 0;
+    }
+  }
+}

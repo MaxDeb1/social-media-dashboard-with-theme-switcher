@@ -1,8 +1,14 @@
+// PACKAGE DEPENDENCIES
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// COMPONENTS
+/* import App from './components/App'; */
+import App from './App';
+
+// STYLES
+import './styles/css/main.css';
 
 ReactDOM.render(
   <React.StrictMode>
